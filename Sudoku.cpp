@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// N is the size of the 2D matrix N*N
+// N is the size of the 2D matrix N*N PHONG
 #define N 9
 
 /* A utility function to print grid */
