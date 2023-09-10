@@ -6,13 +6,13 @@ if [ ! -d .git ]; then
   git init
 fi
 
-# Thêm remote repository
-git remote add origin https://github.com/tranHaoPhong/HELLLO.git
+# URL của remote repository
+remote_url="https://github.com/tranHaoPhong/HELLLO.git"
 
-# Kiểm tra remote repository đã tồn tại hay chưa
-if ! git remote -v | grep -q "origin.*https://github.com/tranHaoPhong/HELLLO.git"; then
-  echo "Lỗi: Không thể thêm remote repository."
-  exit 1
+# Kiểm tra xem remote repository đã tồn tại hay chưa
+if ! git remote -v | grep -q "origin.*$remote_url"; then
+  # Nếu chưa tồn tại, thêm remote repository
+  git remote add origin $remote_url
 fi
 
 # Thêm tất cả các tệp vào git
